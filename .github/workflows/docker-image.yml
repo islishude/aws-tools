@@ -47,7 +47,7 @@ jobs:
       - name: Build with tag and push
         uses: docker/build-push-action@v5
         with:
-          push: ${{ github.ref_type == 'tag' }}
+          push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.docker-meta.outputs.tags }}
           cache-from: type=gha
