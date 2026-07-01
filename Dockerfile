@@ -1,3 +1,3 @@
 # syntax=docker/dockerfile:1
-FROM public.ecr.aws/aws-cli/aws-cli:2.34.40
+FROM public.ecr.aws/aws-cli/aws-cli:2.35.13
 RUN yum update -y  && yum install -y jq  && yum clean all
